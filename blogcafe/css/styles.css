@@ -1,0 +1,385 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    /*tamaño de fuente por default*/
+    line-height: 2;
+    /*interlineado*/
+}
+
+
+/*GLOBALES*/
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    /*para que no tome un 100% sino un 95 y deje un margen cuando la pantalla es pequeña*/
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+h3 {
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    /*para que las img se adapten al contenedor*/
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+    h3,
+    h4 {
+        text-align: start;
+    }
+}
+
+
+/*UTILIDADES*/
+
+.centrar-texto {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0%;
+}
+
+
+/*GRID*/
+
+@media (min-width: 768px) {
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .centrar-columnas {
+        justify-content: center;
+    }
+    .columnas-4 {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas-6 {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-8 {
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-10 {
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12 {
+        flex: 0 0 100%;
+    }
+}
+
+
+/* BOTONES */
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+    border-radius: 4px;
+    flex: 0 0 100%;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.btn-primario {
+    background-color: #000000;
+}
+
+.btn-secundario {
+    background-color: #784d3c;
+}
+
+
+/*HEADER*/
+
+@media (min-width:768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.site-header {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    /*por default las imagenes se repiten, con no-repeat para que no lo haga*/
+    background-position: center center;
+    /*para que la img vaya del centro para el centro*/
+    background-size: cover;
+    /*se llene tato la altura como lo ancho*/
+    height: 60rem;
+    /*600px - fija la altura*/
+}
+
+.site-header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-header h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.site-header h1 span {
+    font-weight: 700;
+}
+
+
+/*NAVEGACION*/
+
+.navegacion a {
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navegacion a:hover {
+    color: rgb(0, 255, 200);
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+
+/*HEADER TEXTO*/
+
+.texto-header {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .texto-header {
+        margin-top: 15rem;
+    }
+}
+
+.texto-header p {
+    font-size: 2.2rem;
+}
+
+
+/*CONTENIDO PRINCIPAL HOME*/
+
+.contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog,
+.cursos {
+    flex: 0 0 100%;
+    /*flex-grow 0 flex-shrink 0 flex-basis 100%*/
+}
+
+.cursos {
+    order: -1;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        justify-content: space-between;
+    }
+    .blog {
+        flex-basis: 66.6%;
+    }
+    .cursos {
+        flex-basis: calc(33.3% - 4rem);
+        order: 2;
+    }
+}
+
+
+/*--OPCIONAL--*/
+
+
+/* .entrada-blog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-blog .imagen {
+    flex: 0 0 40%;
+}
+
+.entrada-blog .contenido-blog {
+    flex: 0 0 calc(60% - 2rem);
+} */
+
+.entrada-blog {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #cab2b2;
+}
+
+.entrada-blog:last-of-type {
+    border: none;
+}
+
+
+/*CURSOS SIDEBAR*/
+
+.cursos-lista {
+    padding: 0;
+    list-style: none;
+}
+
+.curso {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #cab2b2;
+}
+
+.curso:last-of-type {
+    border-bottom: none;
+}
+
+.curso p {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.curso p span,
+.curso p.descripcion {
+    font-weight: 400;
+}
+
+
+/*FOOTER*/
+
+.site-footer {
+    background-color: #000000;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.site-footer p {
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+.site-footer p span {
+    font-weight: 700;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/*CONTACTO*/
+
+.formulario-contacto {
+    background-color: #ffffff;
+    padding: 5rem;
+}
+
+@media (min-width: 768px) {
+    .formulario-contacto {
+        margin-top: -10rem;
+        /*para que el formulario quede arriba de la imagen*/
+    }
+}
+
+.formulario-contacto .campo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.formulario-contacto .campo label {
+    flex: 0 0 8rem;
+}
+
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.formulario-contacto textarea {
+    height: 20rem;
+}
+
+.formulario-contacto .enviar {
+    display: flex;
+    justify-content: flex-end;
+}
