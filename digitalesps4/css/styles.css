@@ -494,6 +494,7 @@ h4 {
     flex: 1;
     border: 1px solid #e1e1e1;
     padding: 1rem;
+    font-size: 88%;
 }
 
 .formulario-contacto textarea {
