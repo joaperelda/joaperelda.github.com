@@ -1,0 +1,510 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*** reset para REMS(los rem son mas que los pixeles-1rem:16px)
+62.5% = 10px de 16px ***/
+}
+
+*,
+*:before,
+*:after {
+    /*esto, mas box-sizing: border-box; son de https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2;
+    /**color de fondo**/
+    background: #757F9A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D7DDE8, #757F9A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/********* GLOBALES ********/
+
+img {
+    /*selecciona a todas las etiquetas de imagenes*/
+    max-width: 100%;
+    /*cambia el tamaño de todas las imagenes*/
+    border-radius: 4px;
+}
+
+.contenedor {
+    max-width: 120rem;
+    /* = 1200px */
+    /*altura maxima: max-width: toma todo el espacio disponible siempre y cuando no te pases de 1200px;*/
+    /*para centrar el contenido se utiliza margin-left y margin-right o simplemente margin con los cuatros valores*/
+    margin: 0 auto;
+    /*arriba - derecha - abajo - izquierda*/
+}
+
+
+/*sistema de tamaños de fuentes*/
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+@media (min-width: 768px) {
+    h3,
+    h4 {
+        text-align: start;
+    }
+}
+
+
+/** UTILIDADES **/
+
+.seccion {
+    /* espacio arriba y abajo en la seccion mas sobre nosotros */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-400 {
+    /* font-weight del titulo mas sobre nosotros */
+    font-weight: 400;
+    /*ancho de fuente*/
+}
+
+.centrar-texto {
+    text-align: center;
+    /*centra el texto*/
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.d-block {
+    display: block!important;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .centrar-columnas {
+        justify-content: center;
+    }
+    .columnas-4 {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columnas-6 {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-8 {
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-10 {
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12 {
+        flex: 0 0 100%;
+    }
+}
+
+
+/****POR SI SE USA GRID=COLUMNAS****/
+
+
+/**** HEADER ****/
+
+.site-header {
+    background-image: url(../img/PERE.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+}
+
+.site-header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.site-header h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.site-header span {
+    font-weight: 700;
+    color: #ff4800;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/****TEXTO-HEADER****/
+
+.texto-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30rem;
+    /*para que el texto "los mejores precios" este abajo*/
+}
+
+.texto-header p {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .texto-header {
+        display: flex;
+        margin: 40rem 0 0 75rem;
+        /* margin-left: 75rem;
+            margin-top: 40rem; */
+    }
+}
+
+
+/****NAVEGACION****/
+
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-flex;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
+    color: lime;
+}
+
+
+/****ANUNCIOS****/
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.precio {
+    color: #019401;
+    font-weight: 700;
+}
+
+.anuncio {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.anuncio img {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .anuncio img {
+        height: 50rem;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    .anuncio {
+        flex: 0 0 calc(33.3% - 1rem);
+        border: 1px solid #b6a4a4;
+        margin-bottom: 2rem;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    .contenido-anuncio {
+        padding: 2rem;
+    }
+    .contenido-anuncio h3,
+    .contenido-anuncio p {
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+
+/****BOTONES****/
+
+.boton {
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2rem;
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+    border-radius: 4px;
+    flex: 0 0 100%;
+}
+
+.boton-primario {
+    background-color: #019401;
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+    border-radius: 4px;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton-primario {
+        display: inline-flex;
+        align-items: center;
+        background-color: #019401;
+        display: block;
+        text-align: center;
+        padding: 1rem 3rem;
+        margin: 2rem 0;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2rem;
+        border-radius: 4px;
+    }
+}
+
+.boton-amarillo {
+    background-color: #019401;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+
+/****FOOTER****/
+
+.site-footer {
+    background-image: url(../img/zul.jpg);
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.site-footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.site-footer h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.site-footer span {
+    font-weight: 700;
+    color: #ff4800;
+}
+
+.copyright {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+/**
++
++
++
++
++
++
++
++
+**/
+
+
+/***PAGINAS INTERNAS***/
+
+
+/****NOSOTROS****/
+
+.contenido-nosotros blockquote {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.contenido-nosotros p {
+    text-align: justify;
+    margin: 20px;
+    /* padding: 0 0 3rem 0; */
+    line-height: 2;
+}
+
+.contenido-nosotros img {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 2rem;
+    }
+    .contenido-nosotros blockquote {
+        text-align: start;
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 0;
+        padding: 0 0 3rem 0;
+    }
+    .contenido-nosotros p {
+        text-align: justify;
+        margin: 1rem;
+        /* padding: 0 0 3rem 0; */
+        line-height: 2;
+    }
+}
+
+
+/****CONTACTO****/
+
+
+/* .formulario-contacto {
+    background-color: #ffffff;
+    padding: 5rem;
+}
+
+@media (min-width: 768px) {
+    .formulario-contacto {
+        margin-top: -12rem;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+}
+
+.formulario-contacto .campo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.formulario-contacto label {
+    flex: 0 0 10rem;
+}
+
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.formulario-contacto textarea {
+    height: 20rem;
+}
+
+.formulario-contacto .enviar {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.formulario-contacto {
+    background-color: #ffffff;
+    padding: 5rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (min-width: 768px) {
+    .formulario-contacto {
+        margin-top: -12rem;
+        /*para que el formulario quede arriba de la imagen*/
+    }
+}
+
+.formulario-contacto .campo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.formulario-contacto .campo label {
+    flex: 0 0 10rem;
+}
+
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.formulario-contacto textarea {
+    height: 20rem;
+}
+
+.formulario-contacto .enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagencontacto img {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
