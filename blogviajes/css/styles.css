@@ -1,0 +1,351 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*** reset para REMS(los rem son mas que los pixeles-1rem:16px)
+                62.5% = 10px de 16px ***/
+}
+
+*,
+*:before,
+*:after {
+    /*esto, mas box-sizing: border-box; son de https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    /* fuente de las letras en la pagina, siempre en body*/
+    font-size: 1.6rem;
+    /* =14px */
+    line-height: 2;
+    /*incrementa el interlineados entre los renglones de los textos*/
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/**GLOBALES**/
+
+img {
+    /*selecciona a todas las etiquetas de imagenes*/
+    max-width: 100%;
+    /*cambia el tamaño de todas las imagenes*/
+}
+
+.contenedor {
+    /* width: 95%; */
+    max-width: 120rem;
+    /* = 1200px */
+    /*altura maxima: max-width: toma todo el espacio disponible siempre y cuando no te pases de 1200px;*/
+    /*para centrar el contenido se utiliza margin-left y margin-right o simplemente margin con los cuatros valores*/
+    margin: 0 auto;
+    /*arriba - derecha - abajo - izquierda*/
+}
+
+.boton {
+    background-color: #6c5ce7;
+    padding: 1rem 6rem;
+    /*10px arriba-abajo - 3px izq-derecha*/
+    display: inline-block;
+    /*te va a dar un poco de separacion pero tamb va a permitir controlar el margen*/
+    margin: 1rem;
+    /*sin el inline no se aplicaria. Esto me da separacion de arriba*/
+    color: #ffffff;
+    text-decoration: none;
+    /*quitar subrayado*/
+    text-transform: uppercase;
+    /*fuente mayusculas*/
+    font-size: 1.8rem;
+    /*tamaño fuente =18px*/
+    font-weight: bold;
+    /*fuente negrita*/
+    border: 0.1rem solid #797070;
+    /*bordes en el boton*/
+    border-radius: 0.5rem;
+    /*bordes redondeados =10px*/
+    transition: background-color .3s ease-in-out;
+    /*para que el cambio a hover sea de 3 segundos*/
+}
+
+.boton:hover {
+    background-color: #08576b;
+}
+
+.clearfix::after {
+    /*para que limpie los float si es que se los usa*/
+    /*siempre que se utiliza after va un content'' vacio*/
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+/**NAVEGACION RESPONSIVE**/
+
+.barra {
+    overflow: hidden;
+    /*para que no aparezcan los enlaces*/
+}
+
+.mobile-menu {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    /*text-alig y display block, para que aparezca al centro*/
+    padding: 2rem 0;
+    /*separacion arriba y abajo de 20px y 0 costados*/
+}
+
+#nav:target {
+    max-height: 80rem;
+}
+
+.navegacion-principal {
+    max-height: 0;
+    /*hace que sea mas chicos*/
+    transition: .5s;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        max-height: unset;
+        /*para que ignore lo de arriba*/
+    }
+    .mobile-menu,
+    .cerrar {
+        display: none!important;
+    }
+}
+
+
+/*SISTEMA DE TAMAÑOS DE FUENTE*/
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+
+/**HEADER**/
+
+.site-header {
+    padding: 2rem 0;
+    /*20px arriba-abajo y 0 izq-derecha*/
+}
+
+
+/**NAVEGACION**/
+
+.barra {
+    background-color: #d63031;
+    /*color barra navegacion*/
+    margin-top: 4rem;
+    /*separacion entre el sidebar y el logo*/
+}
+
+.navegacion-principal a {
+    color: #ffffff;
+    /*color navegacion*/
+    text-decoration: none;
+    /*quita subrayado*/
+    font-size: 2.2rem;
+    /*22px de fuente*/
+    display: block;
+    /*por default los enlaces tienen un display inline que los coloca uno al frente del otro*/
+    text-align: center;
+    /*para que esten centrados*/
+    padding: 2rem;
+    /*para tener separacion de arriba y abajo*/
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal a {
+        display: inline-block;
+        /*para que vuelva a su lugar en pantalla grande y aumenta el tamaño de la barra*/
+    }
+}
+
+.navegacion-principal a:hover {
+    background-color: #6c5ce7;
+    /*color al hacer click o pasar el puntero sobre el navegador*/
+}
+
+
+/**CONTENEDORES PRINCIPALES**/
+
+.contenido-principal {
+    margin-top: 4rem;
+    /*separacion entre el sidebar y el contenido principal*/
+}
+
+.contenido-principal,
+.sidebar {
+    padding: 2rem;
+    /*separacion de 20px*/
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        width: 70%;
+        /*toma 70% de ancho*/
+        float: left;
+        /*quiere decir flotalo hacia la izquierda*/
+        padding: 0 6rem 0 0;
+        /*para tener una separacion a la derecha con el sidebar*/
+    }
+    .sidebar {
+        width: 30%;
+        /*toma 30% de ancho*/
+        float: right;
+        /*flota hacia la derecha*/
+        padding: 0;
+        /*para que no aplique el padding establecido arriba*/
+        margin-top: 4rem;
+    }
+}
+
+
+/**ENTRADAS DE BLOG**/
+
+h2 {
+    color: #6c5ce7;
+    margin-bottom: 2rem;
+    /*margen hacia abajo*/
+}
+
+.entrada-blog {
+    margin-bottom: 6rem;
+    /*separacion para cada entrada*/
+    border-bottom: 0.1rem solid #c2bcbc;
+}
+
+.entrada-blog:last-of-type {
+    border-bottom: none;
+}
+
+.entrada:last-of-type {
+    margin-bottom: 0;
+}
+
+.entrada-blog img {
+    display: block;
+}
+
+@media (min-width: 480px) {
+    .entrada-blog img {
+        width: 30rem;
+        /*la imagen se reduce a 300px*/
+        float: left;
+        /*para que flote hacia la izquierda*/
+        margin: 0 3rem 0 0;
+        /*0 abajo - 30px derecha - 0 abajo - 0 izquierda*/
+    }
+}
+
+.entrada-blog p {
+    text-align: justify;
+}
+
+
+/**SIDEBAR**/
+
+.sidebar ul {
+    list-style: none;
+    /*quita los items*/
+    padding: 0;
+    /*por default los orderlist siempre van a tener un padding aplicados, con 0 se lo quitas*/
+}
+
+.sidebar ul li {
+    padding: 1rem;
+    /*para que sea en todas las direcciones*/
+}
+
+.sidebar ul li:hover {
+    background-color: #6c5ce7;
+    /*fondo cuando el puntero hace click o pasa por encima*/
+}
+
+.sidebar ul li a {
+    color: #6c5ce7;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li:hover a {
+    /*para que cuando el hover de arriba se activa, la fuente cambia de color*/
+    color: #ffffff;
+}
+
+
+/**FOOTER**/
+
+.footer-sitio {
+    background-color: #d63031;
+    padding-top: 4rem;
+    /*separacion arriba*/
+    margin-top: 6rem;
+    /*margen hacia arriba */
+    color: #ffffff;
+    text-align: center;
+    /*texto centrado*/
+}
+
+.footer-sitio h2 {
+    color: #ffffff;
+}
+
+.footer-sitio a {
+    color: #ffffff;
+    /*color de los enlaces*/
+    text-decoration: none;
+    /*quita subrayado*/
+    font-size: 2.2rem;
+    /*tamaño de fuente*/
+    margin-right: 2rem;
+    /*margen hacia la derecha*/
+}
+
+.footer-sitio a:last-of-type {
+    margin-right: 0;
+    /*quita el margen al ultimo elemento*/
+}
+
+@media (min-width: 768px) {
+    .footer-sitio .nosotros {
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+    .footer-sitio .menu {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
+
+.copyright {
+    background-color: #A62D2D;
+    /*franja mas oscura*/
+    margin: 5rem 0 0 0;
+    /*50px arriba y 0 en las otras direcciones */
+    padding: 2rem 0;
+    /*para que sea mas gruesa la franja*/
+}
