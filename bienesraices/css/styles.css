@@ -1,169 +1,209 @@
-    html {
-        box-sizing: border-box;
-        font-size: 62.5%;
-        /*** reset para REMS(los rem son mas que los pixeles-1rem:16px)
-    62.5% = 10px de 16px ***/
-    }
-    
-    *,
-    *:before,
-    *:after {
-        /*esto, mas box-sizing: border-box; son de https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
-        box-sizing: inherit;
-    }
-    
-    body {
-        font-family: 'Lato', sans-serif;
-        /* fuente de las letras en la pagina, siempre en body*/
-        font-size: 1.6rem;
-        /* =16px */
-        line-height: 2;
-        /*incrementa el interlineados entre los renglones de los textos*/
-    }
-    /*GLOBALES*/
-    
-    img {
-        /*selecciona a todas las etiquetas de imagenes*/
-        max-width: 100%;
-        /*cambia el tamaño de todas las imagenes*/
-    }
-    
-    .contenedor {
-        max-width: 120rem;
-        /* = 1200px */
-        /*altura maxima: max-width: toma todo el espacio disponible siempre y cuando no te pases de 1200px;*/
-        /*para centrar el contenido se utiliza margin-left y margin-right o simplemente margin con los cuatros valores*/
-        margin: 0 auto;
-        /*arriba - derecha - abajo - izquierda*/
-    }
-    /*sistema de tamaños de fuentes*/
-    
-    h1 {
-        font-size: 3.8rem;
-    }
-    
-    h2 {
-        font-size: 3.4rem;
-    }
-    
-    h3 {
-        font-size: 3rem;
-    }
-    
-    h4 {
-        font-size: 2.6rem;
-    }
-    /* UTILIDADES */
-    
-    .seccion {
-        /*espacio arriba y abajo en la seccion mas sobre nosotros*/
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .fw-400 {
-        /* font-weight del titulo mas sobre nosotros */
-        font-weight: 400;
-        /*ancho de fuente*/
-    }
-    
-    .centrar-texto {
-        text-align: center;
-        /*centra el texto*/
-    }
-    
-    .d-block {
-        display: block!important;
-        /*botones. !important algo prioritario*/
-    }
-    
-    .contenido-centrado {
-        max-width: 80rem;
-    }
-    /* BOTONES */
-    
-    .boton {
-        color: #ffffff;
-        font-weight: 700;
-        /*grosor de la fuente*/
-        text-decoration: none;
-        /* quita el subrayado de los enlaces*/
-        font-size: 1.8rem;
-        /*tamaño de la fuente*/
-        padding: 1rem 3rem;
-        /*le da espacio 1rem arriba-abajo y 3rem izquierda-derecha*/
-        margin-top: 3rem;
-        /*Dato: en css algunos elementos tienen lo que se conoce como un display: block y otros como display:inline
-            en este caso los enlaces tienen un display:inline (quiere decir que no se le puede aplicar un ancho).
-            Para que haga caso hay que cambiar su display, por default es inline*/
-        display: inline-block;
-        /*se le puede aplicar margin y anchos pero no va a tomar todo el espacio disponible*/
-        /*Dato: los enlaces como las imagenes son display:inline, para darle un ancho o margin hay que modificarlo a display:block o display:inline-block
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*** reset para REMS(los rem son mas que los pixeles-1rem:16px)
+                62.5% = 10px de 16px ***/
+}
+
+*,
+*:before,
+*:after {
+    /*esto, mas box-sizing: border-box; son de https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    /* fuente de las letras en la pagina, siempre en body*/
+    font-size: 1.6rem;
+    /* =16px */
+    line-height: 2;
+    /*incrementa el interlineados entre los renglones de los textos*/
+}
+
+
+/*GLOBALES*/
+
+img {
+    /*selecciona a todas las etiquetas de imagenes*/
+    max-width: 100%;
+    /*cambia el tamaño de todas las imagenes*/
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    /* = 1200px */
+    /*altura maxima: max-width: toma todo el espacio disponible siempre y cuando no te pases de 1200px;*/
+    /*para centrar el contenido se utiliza margin-left y margin-right o simplemente margin con los cuatros valores*/
+    margin: 0 auto;
+    /*arriba - derecha - abajo - izquierda*/
+}
+
+
+/*sistema de tamaños de fuentes*/
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+
+/* UTILIDADES */
+
+.seccion {
+    /*espacio arriba y abajo en la seccion mas sobre nosotros*/
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-400 {
+    /* font-weight del titulo mas sobre nosotros */
+    font-weight: 400;
+    /*ancho de fuente*/
+}
+
+.centrar-texto {
+    text-align: center;
+    /*centra el texto*/
+}
+
+.d-block {
+    display: block !important;
+    /*botones. !important algo prioritario*/
+}
+
+.contenido-centrado {
+    max-width: 80rem;
+}
+
+
+/* BOTONES */
+
+.boton {
+    color: #ffffff;
+    font-weight: 700;
+    /*grosor de la fuente*/
+    text-decoration: none;
+    /* quita el subrayado de los enlaces*/
+    font-size: 1.8rem;
+    /*tamaño de la fuente*/
+    padding: 1rem 3rem;
+    /*le da espacio 1rem arriba-abajo y 3rem izquierda-derecha*/
+    margin-top: 3rem;
+    /*Dato: en css algunos elementos tienen lo que se conoce como un display: block y otros como display:inline
+                 en este caso los enlaces tienen un display:inline (quiere decir que no se le puede aplicar un ancho).
+                 Para que haga caso hay que cambiar su display, por default es inline*/
+    display: inline-block;
+    /*se le puede aplicar margin y anchos pero no va a tomar todo el espacio disponible*/
+    /*Dato: los enlaces como las imagenes son display:inline, para darle un ancho o margin hay que modificarlo a display:block o display:inline-block
                 los div, los h3 y los parrafos son display:block por lo tanto se le puede dar un ancho, un margin sin ningun problema*/
-        text-align: center;
-        /* para que todos los botones esten centrados*/
-        border: none;
-        /*ACA QUITE EL BORDER PORQUE EL BOTON SUBMIT TIENE BORDE POR DEFAULT*/
-        /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        border-radius: 4px;
+    text-align: center;
+    /* para que todos los botones esten centrados*/
+    border: none;
+    /*ACA QUITE EL BORDER PORQUE EL BOTON SUBMIT TIENE BORDE POR DEFAULT*/
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    display: block;
+    /*para que tome todo el espacio disponible(rsp)*/
+    flex: 0 0 100%;
+    /*para los hijos de los elementos flex (rsp)*/
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        /*para que tome bien los margin y padding*/
+        flex: 0 0 auto;
+        /*en casa que sean hijos de flex*/
     }
-    
-    .boton:hover {
-        cursor: pointer;
-        /*cambia puntero en los botones */
-    }
-    
-    .boton-amarillo {
-        background-color: #c90000;
-    }
-    
-    .boton-verde {
-        background-color: #21017a;
-    }
-    /* HEADER */
-    
-    .site-header {
-        background-color: #333333;
-        /*color header arriba*/
-        padding: 1rem 0 3rem 0;
-        /*1 arriba, 0 a la derecha, 3 abajo, 0 a la izquierda*/
-    }
-    
-    .site-header.inicio {
-        background-image: url(../img/header.jpg);
-        background-position: center center;
-        /*posicionar imagen: center: muesta la imagen desde el centro y expande todo el contenido*/
-        background-size: cover;
-        /*toma todo el alto y ancho que haya disponible. cover:propiedad que forza a tomar todo el espacio disponible tanto en altura como en ancho pero siempre guardando las proporciones */
-        height: 100vh;
-        /*viewport height: altura de la pantalla*/
-        min-height: 60rem;
-        /* =600px */
-        /*minimo de altura: por si el usuario tiene una pantalla pequeña*/
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-    
+}
+
+.boton:hover {
+    cursor: pointer;
+    /*cambia puntero en los botones */
+}
+
+.boton-amarillo {
+    background-color: #c90000;
+}
+
+.boton-verde {
+    background-color: #21017a;
+}
+
+
+/* HEADER */
+
+.site-header {
+    background-color: #333333;
+    /*color header arriba*/
+    padding: 1rem 0 3rem 0;
+    /*1 arriba, 0 a la derecha, 3 abajo, 0 a la izquierda*/
+}
+
+.site-header.inicio {
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    /*posicionar imagen: center: muesta la imagen desde el centro y expande todo el contenido*/
+    background-size: cover;
+    /*toma todo el alto y ancho que haya disponible. cover:propiedad que forza a tomar todo el espacio disponible tanto en altura como en ancho pero siempre guardando las proporciones */
+    height: 100vh;
+    /*viewport height: altura de la pantalla*/
+    min-height: 60rem;
+    /* =600px */
+    /*minimo de altura: por si el usuario tiene una pantalla pequeña*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.contenido-header {
+    height: 100%;
+    /*el header principal toma una altura y su hijo llena esa altura, el hijo no puede empujar que el padre crezca mas*/
+    display: flex;
+    flex-direction: column;
+    /*direccion del flex  - colum: de arriba hacia abajo*/
+    justify-content: space-between;
+    text-align: center;
+    /*para que en el movil este centrado, esto centra todo hasta el logotipo*/
+}
+
+@media (min-width: 768px) {
     .contenido-header {
-        height: 100%;
-        /*el header principal toma una altura y su hijo llena esa altura, el hijo no puede empujar que el padre crezca mas*/
-        display: flex;
-        flex-direction: column;
-        /*direccion del flex  - colum: de arriba hacia abajo*/
-        justify-content: space-between;
+        text-align: left;
+        /*para que el contenido se vaya a la izquierda cuando la pantalla sea grande*/
     }
-    
-    .contenido-header h1 {
-        /*contenido "venta de casa y deptos.. el unico h1"*/
-        color: #ffffff;
-        padding-bottom: 2rem;
-        /*separacion de abajo*/
-        max-width: 60rem;
-        /*no se pasa de los 600px y corta el texto*/
-        line-height: 2;
-        /*interlineado: 1renglon 2renglones 3renglones .....*/
-    }
-    
+}
+
+.contenido-header h1 {
+    /*contenido "venta de casa y deptos.. el unico h1"*/
+    color: #ffffff;
+    padding-bottom: 2rem;
+    /*separacion de abajo*/
+    max-width: 60rem;
+    /*no se pasa de los 600px y corta el texto*/
+    line-height: 2;
+    /*interlineado: 1renglon 2renglones 3renglones .....*/
+}
+
+.barra {
+    padding-top: 3rem;
+    /*=30px*/
+    /*margin-top: margen hacia arriba, la separacion arriba- pero deja un espacio blannco arriba asi que es mejor usar padding-top que elimina el espacio y deja el margen*/
+}
+
+@media (min-width: 768px) {
     .barra {
         display: flex;
         /*habilita flex --- se coloca el logo a la izquierza y la navegacion a la derecha*/
@@ -171,16 +211,27 @@
         /*deja un espacio grande entre el logo y la navegacion -- alinea horizontalmente */
         align-items: center;
         /*alinea verticalmente  center: queda el logo centrado hacia los navegadores*/
-        padding-top: 3rem;
-        /*=30px*/
-        /*margin-top: margen hacia arriba, la separacion arriba- pero deja un espacio blannco arriba asi que es mejor usar padding-top que elimina el espacio y deja el margen*/
     }
-    /* NAVEGACION */
-    
+}
+
+
+/* NAVEGACION */
+
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    /*sacar subrayado de los enlaces*/
+    font-size: 2.2rem;
+    /* 2.2rem =22px (por el reset de rems)*/
+    /*tamaño de la fuente*/
+    display: block;
+    /*para que el menu de navegacion quede en una columna cuando la pantalla sea pequeña*/
+}
+
+@media (min-width: 768px) {
     .navegacion a {
-        color: #ffffff;
-        text-decoration: none;
-        /*sacar subrayado de los enlaces*/
+        display: inline-block;
+        /*para que vuelva a su posicion*/
         font-size: 1.8rem;
         /* 1.8rem =18px (por el reset de rems)*/
         /*tamaño de la fuente*/
@@ -188,37 +239,81 @@
         /* =20px */
         /*separacion entre enlaces*/
     }
-    
     .navegacion a:last-of-type {
         /*pseudo selector, ultimo elemento, por la separacion que quedaba*/
         margin-right: 0;
     }
-    
-    a:hover {
-        /*color al colocar el puntero arriba del enlace*/
-        color: #afaaaa;
+}
+
+a:hover {
+    /*color al colocar el puntero arriba del enlace*/
+    color: #c41010;
+}
+
+
+/**MOBILE-MENU**/
+
+.mobile-menu img {
+    width: 5rem;
+    /*tamaño del archivo svg barras*/
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+        /*para que no aparezca cuando la pantalla sea grande*/
     }
-    /** ICONOS NOSOTROS **/
-    
+}
+
+.navegacion:target {
+    display: block;
+    /*para que se ejecute cuando hagamos click*/
+}
+
+.navegacion {
+    display: none;
+    /*para que la navegacion no aparezca cuando sea pequeña*/
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+        /*para que aparezca en la pantalla grande*/
+    }
+}
+
+
+/** ICONOS NOSOTROS **/
+
+@media (min-width: 768px) {
     .iconos-nosotros {
         display: flex;
         /*pone cada icono al lado del otro*/
         justify-content: space-between;
     }
-    
+}
+
+.icono {
+    text-align: center;
+    /*alineas el contenido centrado*/
+}
+
+@media (min-width: 768px) {
     .icono {
         flex-basis: calc(33.3% - 1rem);
         /*vendria a ser la base  33.3% toma el 100% y lo divide en tres y le resta 1rem que son 10px*/
-        text-align: center;
-        /*alineas el contenido centrado*/
     }
-    
-    .icono h3 {
-        /*los h3 son los hijos de .icono por lo cual se modifican solo estos*/
-        text-transform: uppercase;
-    }
-    /*ANUNCIOS*/
-    
+}
+
+.icono h3 {
+    /*los h3 son los hijos de .icono por lo cual se modifican solo estos*/
+    text-transform: uppercase;
+}
+
+
+/*ANUNCIOS*/
+
+@media (min-width: 768px) {
     .contenedor-anuncios {
         display: flex;
         /*habilita flex*/
@@ -226,254 +321,313 @@
         flex-wrap: wrap;
         /*propiedad para que haya tres columnas (anuncios.html)*/
     }
-    
+}
+
+@media (min-width: 768px) {
     .anuncio {
         flex: 0 0 calc(33.3% - 1rem);
         /* flex-grow: 0; si le pongo 1 el contenido crece, si el contenido puede y hay espacio disponible va a crecer */
         /*flex-shrink: 0;  este contenido se debe de hacer mas pequeño si es posible, usualmente esta como 1 que es el default (anuncios.html) */
         /*flex-basis: calc(33.3% - 1rem); a 33.3% se le resta 10px  */
         /**/
-        border: 1px solid #b5b5b5;
-        /* border-style: solid;
-        border-color: #b5b5b5;
-        border-width: 1px;
+    }
+}
 
-        
-        aca le agregamos bordes al contenedor de anuncios*/
-        background-color: #f5f5f5;
-        /*color del fondo*/
-        margin-bottom: 2rem;
-        /*separacion entre los anuncios pq estaban muy juntos desde arriba*/
-        /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        border-radius: 4px;
-    }
-    
-    .contenido-anuncio {
-        padding: 2rem;
-        /*le da padding hacia dentro de 20px*, este aplica 2rem a todas las direcciones */
-    }
-    
-    .contenido-anuncio h3,
-    .contenido-anuncio p {
-        margin: 0;
-        /*le quita el margen dado por la hoja de estilos*/
-    }
-    
-    .precio {
-        color: #71b100;
-        font-weight: 700;
-    }
-    /*Dato: >>>  p font-weight por default:400
+.anuncio {
+    border: 1px solid #b5b5b5;
+    /* border-style: solid;
+    border-color: #b5b5b5;
+    border-width: 1px;
+    aca le agregamos bordes al contenedor de anuncios*/
+    background-color: #f5f5f5;
+    /*color del fondo*/
+    margin-bottom: 2rem;
+    /*separacion entre los anuncios pq estaban muy juntos desde arriba*/
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+    /*le da padding hacia dentro de 20px*, este aplica 2rem a todas las direcciones */
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 0;
+    /*le quita el margen dado por la hoja de estilos*/
+}
+
+.precio {
+    color: #71b100;
+    font-weight: 700;
+}
+
+
+/*Dato: >>>  p font-weight por default:400
                 >>> h1 font-weight por default:700     */
-    
-    .iconos-caracteristicas {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        justify-content: space-evenly;
-        flex: 1;
-        max-width: 500px;
-        /*para que los iconos de anuncio.html esten mas juntos*/
-    }
-    
-    .iconos-caracteristicas li {
-        /* flex: 1; */
-        display: flex;
-    }
-    
-    .iconos-caracteristicas li img {
-        margin-right: 2rem;
-    }
-    
-    .ver-todas {
-        display: flex;
-        /*habilita flex*/
-        justify-content: flex-end;
-        /*mueve el boton hacia la derecha*/
-    }
-    /* CONTACTO HOME */
-    
-    .imagen-contacto {
-        background-image: url(../img/encuentra.jpg);
-        background-position: center center;
-        /*posicionar imagen: center: muesta la imagen desde el centro y expande todo el contenido*/
-        background-size: cover;
-        /*toma todo el alto y ancho que haya disponible. cover:propiedad que forza a tomar todo el espacio disponible tanto en altura como en ancho pero siempre guardando las proporciones */
-        height: 40rem;
-        /*tamaño imagen*/
-        display: flex;
-        /*habilitamos flex*/
-        align-items: center;
-        /*lo centra verticalmente*/
-    }
-    
-    .contenido-contacto {
-        flex: 1;
-        /*flex:1 se lo conoce como factor de crecimiento, detecta cuanto tamaño hay disponible, detecta cuantos elementos hay.. como solamente hay 1 realiza la division.
-     por ej: si hay 1000px disponible y solamente hay 1 disponible, divide 1000px entre 1 y le asigna 1000px a ese elemento*/
-        color: #ffffff;
-    }
-    
-    .contenido-contacto p {
-        font-size: 1.8rem;
-        /*tamaño de la fuente*/
-    }
-    /** SECCION INFERIOR **/
-    
+
+.iconos-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+    /*para que los iconos de anuncio.html esten mas juntos*/
+}
+
+.iconos-caracteristicas li {
+    /* flex: 1; */
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas {
+    display: flex;
+    /*habilita flex*/
+    justify-content: flex-end;
+    /*mueve el boton hacia la derecha*/
+}
+
+
+/* CONTACTO HOME */
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    /*posicionar imagen: center: muesta la imagen desde el centro y expande todo el contenido*/
+    background-size: cover;
+    /*toma todo el alto y ancho que haya disponible. cover:propiedad que forza a tomar todo el espacio disponible tanto en altura como en ancho pero siempre guardando las proporciones */
+    height: 40rem;
+    /*tamaño imagen*/
+    display: flex;
+    /*habilitamos flex*/
+    align-items: center;
+    /*lo centra verticalmente*/
+}
+
+.contenido-contacto {
+    flex: 0 0 95%;
+    /*flex:1 se lo conoce como factor de crecimiento, detecta cuanto tamaño hay disponible, detecta cuantos elementos hay.. como solamente hay 1 realiza la division.
+                   por ej: si hay 1000px disponible y solamente hay 1 disponible, divide 1000px entre 1 y le asigna 1000px a ese elemento*/
+    color: #ffffff;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+    /*tamaño de la fuente*/
+}
+
+
+/** SECCION INFERIOR **/
+
+@media (min-width: 768px) {
     .seccion-inferior {
         display: flex;
         justify-content: space-between;
     }
-    
     .seccion-inferior .blog {
         flex-basis: 60%;
         /*base*/
     }
-    
     .seccion-inferior .testimoniales {
         flex-basis: calc(40% - 2rem);
     }
-    
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+    /*sin margen hacia abajo*/
+}
+
+@media (min-width: 768px) {
     .entrada-blog {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 2rem;
-        /*sin margen hacia abajo*/
     }
-    
-    .entrada-blog:last-of-type {
-        /* selecciona lo ultimo y elimina el margen sobrante con margin:0*/
-        margin-bottom: 0;
-    }
-    
+}
+
+@media (min-width: 768px) {
     .entrada-blog .imagen {
         flex-basis: 40%;
         /*hace mas pequeña la imagen*/
     }
-    
-    .entrada-blog img {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        border-radius: 4px;
-    }
-    
     .entrada-blog .texto-entrada {
         flex-basis: calc(60% - 3rem);
         /*mas separacion*/
     }
-    
-    .texto-entrada a {
-        color: #000000;
-        text-decoration: none;
-    }
-    
-    .texto-entrada h4 {
-        margin: 0;
-        line-height: 1.4;
-    }
-    
-    .texto-entrada h4::after {
-        /*quiere decir crea un elemento que se conoce como pseudoelemento despues del h4*/
-        /*los pseudoelementos no se puedel seleccionar, son elementos que no existen*/
-        content: "";
-        display: block;
-        width: 15rem;
-        height: .5rem;
-        background-color: #21017a;
-        margin-top: 1rem;
-    }
-    
-    .texto-entrada span {
-        color: #c90000;
-        font-weight: bold;
-    }
-    /**TESTIMONIALES**/
-    
-    .testimonial {
-        background-color: #21017a;
-        /*color de fondo*/
-        font-size: 2.4rem;
-        /*tamaño de las letras*/
-        padding: 2rem;
-        /*espacio hacia dentro*/
-        color: #ffffff;
-        /*color del texto*/
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color
-        son sombras en las "cajas"*/
-        border-top-right-radius: 2rem;
-        /*esquina redondeada en la derecha arriba*/
-        border-bottom-left-radius: 2rem;
-        /*esquina redondeada en la izquierda de abajo*/
-    }
-    
-    .testimonial p {
-        text-align: right;
-        /*alinea el parrafo hacia la derecha*/
-    }
-    
-    .testimonial blockquote::before {
-        /*pseudoelemento: elemento antes del elemento en cuestion*/
-        /*before es el hijo de blockquote*/
-        content: "";
-        /*esta vacio porque es una imagen*/
-        background-image: url(../img/comilla.svg);
-        width: 4rem;
-        /*ancho*/
-        height: 4rem;
-        /*altura*/
-        position: absolute;
-        /*este te permite acceder a otras propiedades como top, left, bottom y right*/
-        /*se le puede poner valores negativos*/
-        left: -2rem;
-        /*mueve el elemento hacia <---- */
-    }
-    /*position:relative y absolute te permite posicionar un elemento en un lugar en especifico*/
-    
-    .testimonial blockquote {
-        position: relative;
-        /*el elemento padre debe tener una posicion relativa*/
-        padding-left: 5rem;
-        /*empuja hacia la izquierda, asi que te deja posicionar la imagen */
-        font-weight: 300;
-        /*para que se vea mas delgada la fuente*/
-    }
-    /*los pseudoelementos before y after: before lo crea antes del contenido de ese elemento after lo crea despues de ese elemento,
+}
+
+.entrada-blog:last-of-type {
+    /* selecciona lo ultimo y elimina el margen sobrante con margin:0*/
+    margin-bottom: 0;
+}
+
+.entrada-blog img {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+}
+
+.texto-entrada a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.texto-entrada h4::after {
+    /*quiere decir crea un elemento que se conoce como pseudoelemento despues del h4*/
+    /*los pseudoelementos no se puedel seleccionar, son elementos que no existen*/
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: #21017a;
+    margin-top: 1rem;
+}
+
+.texto-entrada span {
+    color: #c90000;
+    font-weight: bold;
+}
+
+
+/**TESTIMONIALES**/
+
+.testimonial {
+    background-color: #21017a;
+    /*color de fondo*/
+    font-size: 2.4rem;
+    /*tamaño de las letras*/
+    padding: 2rem;
+    /*espacio hacia dentro*/
+    color: #ffffff;
+    /*color del texto*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque Amplitud color
+                 son sombras en las "cajas"*/
+    border-top-right-radius: 2rem;
+    /*esquina redondeada en la derecha arriba*/
+    border-bottom-left-radius: 2rem;
+    /*esquina redondeada en la izquierda de abajo*/
+}
+
+.testimonial p {
+    text-align: right;
+    /*alinea el parrafo hacia la derecha*/
+}
+
+.testimonial blockquote::before {
+    /*pseudoelemento: elemento antes del elemento en cuestion*/
+    /*before es el hijo de blockquote*/
+    content: "";
+    /*esta vacio porque es una imagen*/
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    /*ancho*/
+    height: 4rem;
+    /*altura*/
+    position: absolute;
+    /*este te permite acceder a otras propiedades como top, left, bottom y right*/
+    /*se le puede poner valores negativos*/
+    left: -2rem;
+    /*mueve el elemento hacia <---- */
+}
+
+
+/*position:relative y absolute te permite posicionar un elemento en un lugar en especifico*/
+
+.testimonial blockquote {
+    position: relative;
+    /*el elemento padre debe tener una posicion relativa*/
+    padding-left: 5rem;
+    /*empuja hacia la izquierda, asi que te deja posicionar la imagen */
+    font-weight: 300;
+    /*para que se vea mas delgada la fuente*/
+}
+
+
+/*los pseudoelementos before y after: before lo crea antes del contenido de ese elemento after lo crea despues de ese elemento,
      estos elementos no se pueden seleccionar y no son parte del html
      */
-    /**/
-    /**/
-    /*FOOTER*/
-    
-    .site-footer {
-        background-color: #333333;
-        /*color fondo*/
-        margin: 0;
-        /*para que no aparezca la franja blanca*/
-    }
-    
+
+
+/**/
+
+
+/**/
+
+
+/*FOOTER*/
+
+.site-footer {
+    background-color: #333333;
+    /*color fondo*/
+    margin: 0;
+    /*para que no aparezca la franja blanca*/
+}
+
+.contenedor-footer {
+    padding: 3rem 0;
+    /*3 arriba-abajo  0 izquierda-derecha*/
+    text-align: center;
+}
+
+@media (min-width: 768px) {
     .contenedor-footer {
-        padding: 3rem 0;
-        /*3 arriba-abajo  0 izquierda-derecha*/
         display: flex;
         /*habilitar flex*/
         justify-content: space-between;
         /*sparacion*/
     }
-    
-    .copyright {
-        margin: 0;
-        /*para que no aparezca la franja blanca*/
-        color: #ffffff;
-        /*color letras*/
+}
+
+.site-footer nav {
+    display: none;
+    /*para que se oculte la navegacion cuando la pantalla es pequeña*/
+}
+
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+        /*para que aparezca la navegacion cuando la pantalla sea grande*/
     }
-    /**/
-    /*<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>*/
-    /*PAGINAS INTERNAS (NOSOTROS. ANUNCIOS. BLOG. CONTACTO)*/
-    /**/
-    /**/
-    /*Nosotros*/
-    
+}
+
+.copyright {
+    margin: 0;
+    /*para que no aparezca la franja blanca*/
+    color: #ffffff;
+    /*color letras*/
+}
+
+
+/**/
+
+
+/*<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>*/
+
+
+/*PAGINAS INTERNAS (NOSOTROS. ANUNCIOS. BLOG. CONTACTO)*/
+
+
+/**/
+
+
+/**/
+
+
+/*Nosotros*/
+
+@media (min-width: 768px) {
     .contenido-nosotros {
         display: grid;
         /*nuevo estandar junto a flex, en grid se utilizan columnas*/
@@ -484,104 +638,119 @@
         grid-column-gap: 2rem;
         /*entre cada columna nos agrega una separacion*/
     }
-    
-    .texto-nosotros blockquote {
-        font-weight: 900;
-        /*grosor del titulo*/
-        font-size: 2rem;
-        /*tamaño fuente*/
-        margin: 0;
-        /*le saca el margen del lado izquierdo*/
-        padding: 0 0 3rem 0;
-        /*0 arriba, 0 derecha, 3 abajo, 0 izquierda*/
-    }
-    /**/
-    /**/
-    /*Anuncio*/
-    
-    .resumen-propiedad {
-        display: flex;
-        /*habilitamos flex*/
-        justify-content: space-between;
-        /*separacion*/
-        align-items: center;
-        /*alinear iconos y precio*/
-    }
-    /**/
-    /**/
-    /** CONTACTO **/
-    
-    .contacto p {
-        /*parrafos*/
-        font-size: 1.4rem;
-        /*tamaño fuente*/
-        color: #4f4f4f;
-        /*color*/
-        margin: 2rem 0 0 0;
-        /*por deafault todos los parrafos tienen margen: ponemos 2rem arriba 0abajo-derecha-izquierda*/
-    }
-    
-    legend {
-        font-size: 2rem;
-        /*tamaño fuente del titulo "informacion personal, inf sobre propiedad, etc"*/
-        color: #4f4f4f;
-        /*color de letras*/
-    }
-    
-    label {
-        display: block;
-        /*va a tomar todo el espacio disponible y ya no se encimen uno con otro*/
-        font-weight: 700;
-        /*grosor de fuente*/
-        text-transform: uppercase;
-        /*mayusculas "nombre, email, etc"*/
-    }
-    
-    input:not([type="submit"]),
-    textarea,
-    select {
-        padding: 1rem;
-        /*espacio arriba-abajo*/
-        display: block;
-        /*todo el espacio disponible*/
-        width: 100%;
-        /*ancho*/
-        background-color: #e1e1e1;
-        /*color fondo*/
-        margin-bottom: 2rem;
-        /*margen entre cada inputs*/
-        border: none;
-        /*sacar borde*/
-        border-radius: 1rem;
-        /*esquinas redondeadas*/
-    }
-    
-    input[type="radio"] {
-        width: auto;
-        /*ancho automatico (seccion email-telefono)*/
-        margin: 0;
-        /*quita el margin-bottom:2rem*/
-    }
-    
-    select {
-        -webkit-appearance: none;
-        /*prefijo, para que funcione el apparance: none*/
-        appearance: none;
-        /*para que funcione el padding*/
-    }
-    
-    textarea {
-        height: 20rem;
-        /*altura 20rem = 200px*/
-    }
-    
-    .forma-contacto {
-        max-width: 30rem;
-        /*ancho maximo*/
-        display: flex;
-        /*habilitamos flex*/
-        justify-content: space-between;
-        /*separacion*/
-        align-items: center;
-        /*para que se centren verticalmente*/
-    }
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    /*grosor del titulo*/
+    font-size: 2rem;
+    /*tamaño fuente*/
+    margin: 0;
+    /*le saca el margen del lado izquierdo*/
+    padding: 0 0 3rem 0;
+    /*0 arriba, 0 derecha, 3 abajo, 0 izquierda*/
+}
+.texto-nosotros p{
+    text-align: justify;
+}
+
+/**/
+
+
+/**/
+
+
+/*Anuncio*/
+
+.resumen-propiedad {
+    display: flex;
+    /*habilitamos flex*/
+    justify-content: space-between;
+    /*separacion*/
+    align-items: center;
+    /*alinear iconos y precio*/
+}
+
+
+/**/
+
+
+/**/
+
+
+/** CONTACTO **/
+
+.contacto p {
+    /*parrafos*/
+    font-size: 1.4rem;
+    /*tamaño fuente*/
+    color: #4f4f4f;
+    /*color*/
+    margin: 2rem 0 0 0;
+    /*por deafault todos los parrafos tienen margen: ponemos 2rem arriba 0abajo-derecha-izquierda*/
+}
+
+legend {
+    font-size: 2rem;
+    /*tamaño fuente del titulo "informacion personal, inf sobre propiedad, etc"*/
+    color: #4f4f4f;
+    /*color de letras*/
+}
+
+label {
+    display: block;
+    /*va a tomar todo el espacio disponible y ya no se encimen uno con otro*/
+    font-weight: 700;
+    /*grosor de fuente*/
+    text-transform: uppercase;
+    /*mayusculas "nombre, email, etc"*/
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    /*espacio arriba-abajo*/
+    display: block;
+    /*todo el espacio disponible*/
+    width: 100%;
+    /*ancho*/
+    background-color: #e1e1e1;
+    /*color fondo*/
+    margin-bottom: 2rem;
+    /*margen entre cada inputs*/
+    border: none;
+    /*sacar borde*/
+    border-radius: 1rem;
+    /*esquinas redondeadas*/
+}
+
+input[type="radio"] {
+    width: auto;
+    /*ancho automatico (seccion email-telefono)*/
+    margin: 0;
+    /*quita el margin-bottom:2rem*/
+}
+
+select {
+    -webkit-appearance: none;
+    /*prefijo, para que funcione el apparance: none*/
+    appearance: none;
+    /*para que funcione el padding*/
+}
+
+textarea {
+    height: 20rem;
+    /*altura 20rem = 200px*/
+}
+
+.forma-contacto {
+    max-width: 30rem;
+    /*ancho maximo*/
+    display: flex;
+    /*habilitamos flex*/
+    justify-content: space-between;
+    /*separacion*/
+    align-items: center;
+    /*para que se centren verticalmente*/
+}
